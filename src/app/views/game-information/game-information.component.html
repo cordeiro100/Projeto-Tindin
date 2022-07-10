@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fc4444;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="assets/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="search">
+        <form [formGroup]="pesquisaForm" (ngSubmit)="getListByTerm()" >
+        <input type="search" placeholder="Search Game Here" name="search" id="search"  formControlName="search"  [(ngModel)]="search" />
+        <button type="submit">Search</button>
+      </form>
+      <div class="icone"> <a routerLink="login"><i class="bi bi-person"></i></a> </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+  <div *ngIf="game">
+<div class="game-information">
+  
+    <i class="bi bi-house-fill"></i>
+    <p>|</p>
+    <h4>{{game.title}}</h4>
+</div>
+
+
+
+<div  class="principal"> 
+
+    <aside>
+      <img class="foto-game" [src]="game.photos[0].url">
+
+
+
+    </aside>
+    
+    
+    <section>
+  <div class="rating-title">
+      <p class="title">{{game.rating}}/10</p>
+      <h5>{{game.title}}</h5>
+    </div>
+
+    <div class="resume"><p>Resume game here limited of one line...</p></div><hr>
+    
+    <div class="information">
+    <h4>Genres: {{game.genres}}</h4>
+    <h4>Studio: Apple</h4>
+    <h4>Productor:</h4>
+    <h4>Total votes: {{game.totalVotes}}</h4>
+    <h4>Company: </h4>
+    <h4>Platforms: {{game.platforms}} </h4>
+    <h4>Tags: {{game.tags}}</h4>
+  </div><hr>
+<div class="price">
+    <h2>Medium Price</h2><h2 class="price-color"> {{game.mediumPrice | currency: "BRL":true}}</h2>
+  </div>
+  <p class="date">Release date: {{game.releaseYear}}</p>
+      
+      <button>Vote now</button><hr>
+    </section>
+  
+  </div>
+</div>      
