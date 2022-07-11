@@ -10,6 +10,7 @@ import { GameInformationComponent } from './views/game-information/game-informat
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { LogadoComponent } from './views/logado/logado.component';
+import { AddgameComponent } from './views/addgame/addgame.component';
 
 
 
@@ -20,6 +21,7 @@ import { LogadoComponent } from './views/logado/logado.component';
     LoginComponent,
     GameInformationComponent,
     LogadoComponent,
+    AddgameComponent,
    
    
   ],
