@@ -1,27 +1,20 @@
-# Teste
+Teste site Tindin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+1 - Página Home com busca funcional, buscando por titles da API.
 
-## Development server
+2 - Ao clicar no game, página de informações do game funcional filtrada por id.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+3 - Ícone de login redirecionado para página de login
 
-## Code scaffolding
+4 - Autenticação login funcional.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+5 - Página quando login efetuado com sucesso criada.
 
-## Build
+6 - Ao clicar no botão new game da página, após logado, o usuário é redirecionado para página de crud.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+7 - OBS: Não consegui tempo suficiente para finalizar o crud. Infelizmente um caminhão arrebentou os fios da internet aqui da rua e tive
 
-## Running unit tests
+    2 dias a menos para trabalhar em meu projeto.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+8 - Agradeço a oportunidade de fazer parte desse processo seletivo.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
