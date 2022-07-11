@@ -8,6 +8,8 @@ import { LoginComponent } from './views/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GameInformationComponent } from './views/game-information/game-information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { LogadoComponent } from './views/logado/logado.component';
 
 
 
@@ -17,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     GameInformationComponent,
+    LogadoComponent,
    
    
   ],
@@ -25,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

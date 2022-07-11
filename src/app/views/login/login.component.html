@@ -1,30 +1,32 @@
-<div class="all">
-    <nav
-      class="navbar navbar-expand-lg navbar-light"
-      style="background-color: #fc4444"
-    >
-      <div class="container-fluid">
-        <img class="foto-logo" src="assets/logo.png" />
-  
-        <div class="search">
-          <input type="search" placeholder="Search Game Here" />
-          <button>Search</button>
-        </div>
-  
-        <div class="collapse navbar-collapse" id="navbarNav"></div>
-        <i class="bi bi-person"></i>
-      </div>
-    </nav>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #fc4444;">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=""><img src="assets/logo.png"></a>
+    
+</div>
+</nav>
+
 <section>
 <div class="box">
 
-    <form>
+    <form [formGroup]="formLogin" #userForm="ngForm" (ngSubmit)="logar()">
         <h3>Sing In</h3>
         <p class="insert">Insert your Account Information</p>
-        <input type="email" id="email" name="email" placeholder="Username or Email">
-        <input type="password" id="senha" name="senha" placeholder="Password">
-        <button type="submit">Login your Account</button>
+        <input type="email" id="email" name="email" placeholder="Username or Email" formControlName="email" [(ngModel)]="userModel.email">
+        <small
+        *ngIf="formLogin.get('email')?.errors?.['required']"
+        class="text-danger d-block mt-2"
+      >
+        Um email é necessário
+      </small>
+
+        <input type="password" id="password" name="password" placeholder="Password"   formControlName="password" [(ngModel)]="userModel.password" >
+        <small
+          *ngIf="formLogin.get('password')?.errors?.['required']"
+          class="text-danger d-block mt-2"
+        >
+          Uma senha é necessária
+        </small>
+        <button type="submit" [disabled]="!formLogin.valid">Login your Account</button>
         <p class="no-account">No account? Send email fabio@tindin.com.br</p>
     </form>
 </div>

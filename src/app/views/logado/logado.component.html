@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fc4444">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+       </div>
+       <div class="icone"> <a routerLink="login"><i class="bi bi-person"></i></a> </div>
+    </div>
+  </nav>
+  <div class="all">
+    <aside>
+        <h1>Games</h1>
+        <h4>Games manager portal</h4>
+    </aside>
+    <div class="right-side">
+        <input type="search" placeholder="Search from...">
+        <button routerLink="">New Game</button>
+    </div>
+  </div>
+  
+  
+  
+  <div *ngIf="listGames">
+ 
+    <div class="background">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          
+            <div class="card col-3"
+              *ngFor="let game of listGames.games">
+             
+             <a [routerLink]="['/gameInformation', game._id]"><img *ngIf="game.photos.length > 0" [src]="game.photos[0].url" /><img *ngIf="game.photos.length == 0" src="assets/err.jpg" /></a>
+             <h5>{{game.title}}</h5>
+             <h5>{{game.mediumPrice | currency: "BRL":true}}</h5>
+             <p class="rating">{{game.rating}}/10</p>
+    
+          </div>
+        </div>
+      </div>
+     
+     <a routerLink=""><p class="more-products-link">view more products</p></a>
+    </div>
+    </div>
